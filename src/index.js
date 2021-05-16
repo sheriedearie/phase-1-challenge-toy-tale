@@ -13,3 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+const URL = "http://localhost:3000/toys"
+
+function getToys(){
+  fetch(URL)
+  .then(res => res.json())
+  .then(toyArry => toyArry.forEach(toy => renderToy (toy)))
+  }
+
+function renderToy(){
+  let toyCollection = document.getElementById("toy-collection")
+}
